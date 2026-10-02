@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NORVEX — Digital Systems / Creative Technology</title>
+  <meta name="description" content="NORVEX — developer / creator. Web, software, systems. Glass interface portfolio." />
+  <meta property="og:title" content="NORVEX — Digital Systems / Creative Technology" />
+  <meta property="og:description" content="NORVEX — developer / creator. Web, software, systems. Glass interface portfolio." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#070507" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script defer src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="/style" />
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
+      #particles { display: none; }
+      .xh, #xhTrail, .loader { display: none !important; }
+      body.is-loading { overflow: auto !important; }
+    </style>
+  </noscript>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070507'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='14' font-weight='700' fill='%23FF2E4E' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="is-loading">
+  <!-- Preloader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-content">
+      <div class="loader-mark">N</div>
+      <div class="loader-word">
+        <span>N</span><span>O</span><span>R</span><span>V</span><span>E</span><span>X</span>
+      </div>
+      <div class="loader-bar"><i id="loadFill"></i></div>
+      <div class="loader-meta">
+        <span id="loadMsg">INITIALIZING</span>
+        <span id="loadPct">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Atmospheric Background Ecosystem -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="orb orb-4"></div>
+    </div>
+    <div class="bg-streaks">
+      <div class="streak streak-1"></div>
+      <div class="streak streak-2"></div>
+    </div>
+    <div class="bg-noise"></div>
+    <div class="bg-vignette"></div>
+  </div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- Custom Crosshair Cursor & Trail -->
+  <div class="xh" id="xh" aria-hidden="true">
+    <div class="xh-dot"></div>
+    <div class="xh-ring"></div>
+    <div class="xh-tick t-top"></div>
+    <div class="xh-tick t-bottom"></div>
+    <div class="xh-tick t-left"></div>
+    <div class="xh-tick t-right"></div>
+    <div class="xh-coords" id="xhCoords">X:0000 Y:0000</div>
+  </div>
+  <div id="xhTrail" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="nav-wrap" id="top">
+    <nav class="nav glass" aria-label="Main Navigation">
+      <a href="#top" class="brand" aria-label="NORVEX Home">
+        <span class="brand-mark">N</span>
+        <span>NORVEX</span>
+        <span class="brand-status" aria-hidden="true"></span>
+      </a>
+      <div class="nav-links">
+        <a href="#field" class="nav-link">Field</a>
+        <a href="#stack" class="nav-link">Stack</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#contact" class="btn-nav">Initiate</a>
+      </div>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu glass" id="mobileMenu" aria-label="Mobile Navigation">
+    <a href="#hero" class="mobile-link">Home</a>
+    <a href="#field" class="mobile-link">Field</a>
+    <a href="#stack" class="mobile-link">Stack</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main">
+    <!-- HERO SECTION -->
+    <section class="section" id="hero">
+      <div class="hero-meta mono reveal">
+        <span class="hero-meta-dot"></span>
+        <span>SYS.01 — INTERFACE ● v2.6/2026</span>
+      </div>
+
+      <div class="hero-title-wrap reveal">
+        <h1 class="hero-title">NORVEX</h1>
+        <div class="hero-reflection" aria-hidden="true">NORVEX</div>
+      </div>
+
+      <p class="hero-sub reveal">Digital systems. / Creative technology.</p>
+
+      <!-- 3D Tilting Glass Console -->
+      <div class="stage-wrap reveal" id="stage">
+        <div class="main-glass glass">
+          <div class="main-glass-top">
+            <div class="sys-tag mono">
+              <span class="sys-status-live"></span>
+              <span>NORVEX.OS LIVE</span>
+            </div>
+            <div class="mono">60FPS / GPU ACCEL</div>
+          </div>
+
+          <div class="main-glass-center">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="core-n">N</div>
+
+            <div class="fc fc-1">
+              <span class="fc-title">Glass Stack</span>
+              <span class="fc-sub">ULTRA-LOW LATENCY</span>
+            </div>
+            <div class="fc fc-2">
+              <span class="fc-title">Systems</span>
+              <span class="fc-sub">ARCHITECTURE &amp; FLOW</span>
+            </div>
+            <div class="fc fc-3">
+              <span class="fc-title">Signal</span>
+              <span class="fc-sub">LOCKED 100%</span>
+            </div>
+          </div>
+
+          <div class="main-glass-bottom mono">
+            <span>WEB</span> · <span>SOFTWARE</span> · <span>SYSTEMS</span> · <span>GAMING</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Actions -->
+      <div class="hero-actions reveal">
+        <a href="#field" class="btn btn-primary magnetic">
+          <span>Enter the field</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+        <a href="#stack" class="btn btn-ghost magnetic">
+          <span>Stack</span>
+        </a>
+      </div>
+
+      <!-- Hero Scroll Indicator -->
+      <div class="hero-scroll mono reveal">
+        <span>SCROLL-001</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- 01 ORBITAL FIELD SECTION -->
+    <section class="section" id="field">
+      <div class="field-panel glass reveal">
+        <div class="field-top">
+          <div class="mono" style="color:var(--text);font-weight:600;">01-ORBITAL FIELD</div>
+          <div class="mono" style="color:var(--cyan);">DRIFT / LIVE</div>
+        </div>
+
+        <div class="orbit-stage">
+          <div class="orbit-grid"></div>
+          <div class="orbit-blur-orb orbit-blur-1"></div>
+          <div class="orbit-blur-orb orbit-blur-2"></div>
+
+          <div class="o-ring o-1"><span class="satellite"></span></div>
+          <div class="o-ring o-2"><span class="satellite"></span></div>
+          <div class="o-ring o-3"><span class="satellite"></span></div>
+          <div class="o-ring o-4"><span class="satellite"></span></div>
+
+          <div class="o-core">N</div>
+
+          <div class="orbit-chip oc-1">R.01 — 42s</div>
+          <div class="orbit-chip oc-2">SIGNAL-LOCKED</div>
+          <div class="orbit-chip oc-3">DRIFT — LOW G</div>
+
+          <div class="o-dot od-1"></div>
+          <div class="o-dot od-2"></div>
+          <div class="o-dot od-3"></div>
+          <div class="o-dot od-4"></div>
+          <div class="o-dot od-5"></div>
+
+          <div class="shine"></div>
+        </div>
+
+        <div class="field-bottom mono">
+          <span>GRAVITY-LOW</span>
+          <span>MOTION-SMOOTH</span>
+          <span>STABLE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 STACK SECTION -->
+    <section class="section" id="stack">
+      <div class="section-head reveal">
+        <div class="mono">02-TECHNOLOGY SYSTEM</div>
+        <h2>Stack</h2>
+        <p class="section-sub">Engineered with high precision across modern frontend interfaces, robust backends, and modular developer tooling.</p>
+      </div>
+
+      <div class="stack-grid">
+        <!-- Frontend Interface -->
+        <div class="s-card glass reveal" data-card="frontend">
+          <div class="s-card-glare" aria-hidden="true"></div>
+          <div class="shine" aria-hidden="true"></div>
+          <div class="s-card-top">
+            <div class="s-card-header-row">
+              <div class="s-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="s-card-badge mono">SYS.01</span>
+            </div>
+            <div>
+              <h3 class="s-card-title">Frontend Interface</h3>
+              <p class="mono" style="margin-top:2px;">User Experience &amp; Motion</p>
+            </div>
+            <div class="s-pills">
+              <span class="s-pill">HTML</span>
+              <span class="s-pill">CSS</span>
+              <span class="s-pill">JS</span>
+              <span class="s-pill">TS</span>
+              <span class="s-pill">React</span>
+            </div>
+          </div>
+          <div class="s-meter-wrap">
+            <div class="s-meter-info">
+              <span>Proficiency</span>
+              <span class="s-meter-val">88%</span>
+            </div>
+            <div class="s-meter-bar">
+              <div class="s-meter-fill" style="--w: 88%;">
+                <span class="s-meter-glow"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend Logic -->
+        <div class="s-card glass reveal" data-card="backend">
+          <div class="s-card-glare" aria-hidden="true"></div>
+          <div class="shine" aria-hidden="true"></div>
+          <div class="s-card-top">
+            <div class="s-card-header-row">
+              <div class="s-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect>
+                  <rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect>
+                  <line x1="6" x2="6.01" y1="6" y2="6"></line>
+                  <line x1="6" x2="6.01" y1="18" y2="18"></line>
+                </svg>
+              </div>
+              <span class="s-card-badge mono">SYS.02</span>
+            </div>
+            <div>
+              <h3 class="s-card-title">Backend Logic</h3>
+              <p class="mono" style="margin-top:2px;">Services &amp; Data Pipeline</p>
+            </div>
+            <div class="s-pills">
+              <span class="s-pill">Node</span>
+              <span class="s-pill">Python</span>
+              <span class="s-pill">REST</span>
+            </div>
+          </div>
+          <div class="s-meter-wrap">
+            <div class="s-meter-info">
+              <span>Proficiency</span>
+              <span class="s-meter-val">72%</span>
+            </div>
+            <div class="s-meter-bar">
+              <div class="s-meter-fill" style="--w: 72%;">
+                <span class="s-meter-glow"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Systems Foundations -->
+        <div class="s-card glass reveal" data-card="systems">
+          <div class="s-card-glare" aria-hidden="true"></div>
+          <div class="shine" aria-hidden="true"></div>
+          <div class="s-card-top">
+            <div class="s-card-header-row">
+              <div class="s-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20"></path>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <span class="s-card-badge mono">SYS.03</span>
+            </div>
+            <div>
+              <h3 class="s-card-title">Systems Foundations</h3>
+              <p class="mono" style="margin-top:2px;">Infrastructure &amp; Speed</p>
+            </div>
+            <div class="s-pills">
+              <span class="s-pill">Git</span>
+              <span class="s-pill">CLI</span>
+              <span class="s-pill">Performance</span>
+            </div>
+          </div>
+          <div class="s-meter-wrap">
+            <div class="s-meter-info">
+              <span>Proficiency</span>
+              <span class="s-meter-val">80%</span>
+            </div>
+            <div class="s-meter-bar">
+              <div class="s-meter-fill" style="--w: 80%;">
+                <span class="s-meter-glow"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools Workflow -->
+        <div class="s-card glass reveal" data-card="tools">
+          <div class="s-card-glare" aria-hidden="true"></div>
+          <div class="shine" aria-hidden="true"></div>
+          <div class="s-card-top">
+            <div class="s-card-header-row">
+              <div class="s-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <span class="s-card-badge mono">SYS.04</span>
+            </div>
+            <div>
+              <h3 class="s-card-title">Tools Workflow</h3>
+              <p class="mono" style="margin-top:2px;">Tooling &amp; Prototyping</p>
+            </div>
+            <div class="s-pills">
+              <span class="s-pill">VSCode</span>
+              <span class="s-pill">Figma</span>
+              <span class="s-pill">Vite</span>
+            </div>
+          </div>
+          <div class="s-meter-wrap">
+            <div class="s-meter-info">
+              <span>Proficiency</span>
+              <span class="s-meter-val">76%</span>
+            </div>
+            <div class="s-meter-bar">
+              <div class="s-meter-fill" style="--w: 76%;">
+                <span class="s-meter-glow"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 ABOUT SECTION -->
+    <section class="section" id="about">
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <div class="mono">03-PROFILE</div>
+          <h2 class="about-title">NORVEX<br><span style="color:var(--muted);font-weight:400;font-size:0.8em;">Developer / Creator</span></h2>
+          <p class="about-copy">Dedicated to building uncompromising digital products, tactile interfaces, and high-performance creative technologies. Emphasizing low cognitive drag, precision motion, and dependable engineering.</p>
+          <div class="about-meta-row">
+            <span>BASE-REMOTE</span>
+            <span>·</span>
+            <span>MODE-BUILDING</span>
+          </div>
+          <div style="margin-top:14px;">
+            <a href="#contact" class="btn btn-primary magnetic">
+              <span>Contact</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <aside class="profile glass reveal">
+          <div class="profile-head">
+            <div class="profile-avatar">N</div>
+            <div class="profile-meta">
+              <h3>NORVEX</h3>
+              <p>Developer / Creator</p>
+              <div class="profile-status">
+                <span class="profile-status-dot"></span>
+                <span>ONLINE</span>
+              </div>
+            </div>
+          </div>
+
+          <dl class="profile-dl">
+            <dt>FOCUS</dt>
+            <dd>Creative Systems &amp; Web Interfaces</dd>
+            <dt>CURRENT</dt>
+            <dd>NORVEX Glass System v3</dd>
+            <dt>STACK</dt>
+            <dd>TypeScript · React · Systems</dd>
+            <dt>INTERESTS</dt>
+            <dd>Real-time Graphics, Shaders, UI Physics</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 04 CONTACT SECTION -->
+    <section class="section" id="contact">
+      <div class="contact-panel glass reveal">
+        <div class="contact-head">
+          <div class="mono">04-CHANNEL</div>
+          <h2 class="contact-title">Let's connect</h2>
+          <div class="mono" style="color:var(--cyan);letter-spacing:0.18em;">PICK A FREQUENCY</div>
+        </div>
+
+        <!-- Social Channels -->
+        <div class="socials">
+          <a href="https://t.me/NRXAdverb" target="_blank" rel="noopener noreferrer" class="social-btn live-link magnetic" title="Open Telegram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" x2="11" y1="2" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            <span>Telegram</span>
+          </a>
+
+          <button type="button" class="social-btn magnetic" data-social="github" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+              <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
+            <span>GitHub</span>
+          </button>
+
+          <button type="button" class="social-btn magnetic" data-social="instagram" title="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+            <span>Instagram</span>
+          </button>
+
+          <button type="button" class="social-btn magnetic" data-social="youtube" title="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+              <polygon points="10 15 15 12 10 9 10 15"></polygon>
+            </svg>
+            <span>YouTube</span>
+          </button>
+        </div>
+
+        <!-- Copy Email -->
+        <div class="mail-container">
+          <button type="button" class="mail-box magnetic" id="copyMail" title="Click to copy email">
+            <span class="copy-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+              </svg>
+            </span>
+            <span class="mail-text" id="mailText">hello@norvex.dev</span>
+          </button>
+        </div>
+
+        <div class="mono" style="color:var(--dim);margin-top:4px;">
+          <span>TELEGRAM LIVE</span> · <span>RESPONSE &lt; 24H</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" style="width:26px;height:26px;font-size:12px;">N</span>
+        <span>NORVEX</span>
+      </div>
+      <div class="footer-copy">© 2026 NORVEX GLASS SYSTEM v2.6</div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <a href="/norvex-portfolio.zip" download="norvex-portfolio.zip" class="to-top" title="Download ZIP Archive" style="color:var(--text);border-color:rgba(255,46,78,0.35);background:rgba(255,46,78,0.12);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--cyan);">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" x2="12" y1="15" y2="3"></line>
+          </svg>
+          <span>DOWNLOAD ZIP</span>
+        </a>
+        <button type="button" class="to-top" id="toTop" aria-label="Back to top">
+          <span>TOP</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification element -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="toast-dot"></span>
+    <span id="toastMsg">Notification</span>
+  </div>
+
+  <!-- Main logic -->
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
